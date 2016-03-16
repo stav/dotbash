@@ -1,0 +1,28 @@
+# ~/.bash_functions_private: executed by ~/.bash_functions
+# This code should not go into the repo
+
+SW_HEADER_PRIVATE='
+  PRIVATE HANDLES:  \n
+  ----------------  \n
+  x - Project X     \n
+  y - Project Y     \n
+  z - Project Z     \n
+';
+
+SW_MAPPED=true;
+case "$1" in
+	x)
+		workon 'x'
+		cd "$HOME/projects/X"
+		;;
+	y)
+		workon 'y'
+		cd "$HOME/projects/Y"
+		;;
+	z)
+		workon 'z'
+		cd "$HOME/projects/Z"
+		;;
+	*)
+		SW_MAPPED=false;
+esac
