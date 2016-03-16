@@ -1,5 +1,5 @@
-# ~/.bash_functions_private: executed by ~/.bash_functions
-# This code should not go into the repo
+# ~/.bash_functions_private.sample:
+# rename this file to ~/.bash_functions_private
 
 SW_HEADER_PRIVATE='
   PRIVATE HANDLES:  \n
