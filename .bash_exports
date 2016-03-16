@@ -1,0 +1,6 @@
+# ~/.bash_exports: executed by ~/.bash_profile
+
+# Virtual Environment Setup
+# http://virtualenvwrapper.readthedocs.org/en/latest/install.html#shell-startup-file
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh

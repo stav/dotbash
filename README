@@ -1,9 +1,28 @@
 README
 
-.bash_* files for interactive user.
+Bash dot files used for interactive user on Ubuntu
 
 I have this setup:
 
-$ git clone git@github.com:stav/dotfiles.git
-$ mv -r dotfiles ~/.bash
-$ for file in ~/.bash; do ln -s ".bash/$file" "~/$file"; done;
+    $ git clone git@github.com:stav/dotfiles.git
+    $ mv -r dotfiles ~/.bash
+    $ for file in ~/.bash; do ln -s ".bash/$file" "~/$file"; done;
+
+.bashrc
+
+	Just source .bash_profile
+
+.bash_profile
+
+	* Add ~/bin to PATH
+
+	* Source all of these files if they exist:
+
+		** ~/.bash_path
+		** ~/.bash_prompt
+		** ~/.bash_exports
+		** ~/.bash_aliases
+		** ~/.bash_functions
+		** ~/.bash_extra
+
+	* Setup some history stuff and bash-completion
