@@ -14,8 +14,6 @@ I have this setup:
 
 .bash_profile
 
-	* Add ~/bin to PATH
-
 	* Source all of these files if they exist:
 
 		** ~/.bash_path

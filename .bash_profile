@@ -1,9 +1,6 @@
 # ~/.bash_profile: executed by ~/.bashrc
 # Code taken from .bashrc standard Ubuntu install
 
-# Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
-
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
