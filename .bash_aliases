@@ -48,6 +48,7 @@ alias gb='git branch '
 alias gc='git commit'
 alias gd='git diff'
 alias gl='git lg '
+alias gm='git checkout master'
 alias go='git checkout '
 alias gs='git status '
 
