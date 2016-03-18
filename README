@@ -2,13 +2,6 @@ README
 
 Bash dot files used for interactive user on Ubuntu
 
-I have this setup:
-
-    $ git clone git@github.com:stav/dotfiles.git
-    $ mkdir ~/.bash
-    $ mv dotfiles/.bash* ~/.bash
-    $ for file in ~/.bash; do ln -s ".bash/$file" "~/$file"; done;
-
 .bashrc
 
 	Just source .bash_profile
