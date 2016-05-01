@@ -11,6 +11,6 @@ for file in "$dir"/.bash*; do
 		echo "$name exists, Moving from" ~/"$name" to ~/"$name"~
 		mv ~/"$name" ~/"$name"~  # make backup
 	fi
-	echo 'Linking' "$dir/$name" to ~/"$name"
+	echo 'Linking' "$dir/$name" from ~/"$name"
 	ln -s "$dir/$name" ~/"$name"  # make symlink
 done;

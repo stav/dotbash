@@ -1,4 +1,5 @@
 # ~/.bash_path: executed by ~/.bash_profile
+# Extend `$PATH`
 
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
