@@ -1,9 +1,10 @@
 # ~/.bash_functions: executed by ~/.bash_profile
 # Functions allow for more complex script
 
-# Resource bash files
+# Re-source bash files
 
-function sbp () {
+function sbp ()
+{
 	# TODO: check if in venv and deactivate/activate
 	deactivate
 	source ~/.bash_profile
@@ -52,4 +53,11 @@ function sw ()
 			fi
 			;;
 	esac
+}
+
+# Git rebase head [ num-prev-commits ]
+
+function grh ()
+{
+	git rebase -i HEAD~$1
 }

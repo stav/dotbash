@@ -4,3 +4,7 @@
 # http://virtualenvwrapper.readthedocs.org/en/latest/install.html#shell-startup-file
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
+
+# Slack Ubuntu 16.04 : make non-OSD notifications use notify-send
+# Also in /usr/share/applications/slack.desktop
+export ELECTRON_USE_UBUNTU_NOTIFIER=1
