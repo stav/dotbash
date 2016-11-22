@@ -8,3 +8,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 # Slack Ubuntu 16.04 : make non-OSD notifications use notify-send
 # Also in /usr/share/applications/slack.desktop
 export ELECTRON_USE_UBUNTU_NOTIFIER=1
+
+# Make grep patterns green which looks better than the defalt red on dark themes
+# http://unix.stackexchange.com/questions/148#answer-174
+export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
