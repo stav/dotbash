@@ -58,15 +58,18 @@ alias gl='git lg '
 alias go='git checkout '
 alias gob='git checkout -b '
 alias gom='git checkout master'
-alias gos='git checkout staging'
-alias gr='git rebase -i staging'
-alias grs='git rebase -i staging'
+alias gor='git checkout release'
+alias got='git checkout testing'
+alias god='git checkout documentation'
+alias gr='git rebase -i release'
 alias grm='git rebase -i master'
-# alias grh='git rebase -i HEAD~$1' # see functions
+alias grr='git rebase -i release'
+alias grt='git rebase -i testing'
 alias grc='git rebase --continue'
+alias grh=git_rebase_head  # alias grh='git rebase -i HEAD~$1' # see functions
 alias gs='git status '
 alias gt='git mergetool '
-alias gq='echo ...........; gb; echo ...........; gs; echo ...........; gl'
+alias gq=git_dash  # see functions
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
