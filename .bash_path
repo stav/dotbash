@@ -1,6 +1,6 @@
-# ~/.bash_path: executed by ~/.bash_profile
+# .bash_path: executed by .bash_profile
 # Extend `$PATH`
 
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
- # ^ this is double dipping from ~/.profile
+# export PATH="$HOME/bin:$PATH";
+# ^ this is double dipping from ~/.profile

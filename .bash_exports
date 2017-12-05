@@ -1,9 +1,10 @@
-# ~/.bash_exports: executed by ~/.bash_profile
+# .bash_exports: executed by .bash_profile
 
 # Virtual Environment Setup
 # http://virtualenvwrapper.readthedocs.org/en/latest/install.html#shell-startup-file
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+export PROJECT_HOME=$HOME/Work
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
 # Slack Ubuntu 16.04 : make non-OSD notifications use notify-send
 # Also in /usr/share/applications/slack.desktop

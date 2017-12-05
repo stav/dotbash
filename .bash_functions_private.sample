@@ -1,4 +1,4 @@
-# ~/.bash_functions_private.sample:
+# .bash_functions_private.sample:
 # rename this file to ~/.bash_functions_private
 
 SW_HEADER_PRIVATE='

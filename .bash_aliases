@@ -1,4 +1,4 @@
-# ~/.bash_aliases: executed by ~/.bash_profile
+# .bash_aliases: executed by .bash_profile
 # examples taken from https://github.com/mathiasbynens/dotfiles
 
 # enable color support of ls and also add handy aliases
@@ -48,13 +48,14 @@ alias t3="tree -L 3 -lpguh"
 alias t4="tree -L 4 -lpguh"
 
 # Git
-alias g="git"
+alias g='git'
 alias ga='git commit --all'
 alias gb='git branch '
 alias gc='git commit'
 alias gd='git diff'
+alias gf='git fetch'
 alias gdm='git diff --name-status master'
-alias gl='git lg '
+alias gl='git log --graph -n 20 --pretty=format:"%C(white)%h%Creset - %C(magenta)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative '
 alias go='git checkout '
 alias gob='git checkout -b '
 alias gom='git checkout master'

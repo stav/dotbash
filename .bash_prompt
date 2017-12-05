@@ -1,4 +1,4 @@
-# ~/.bash_prompt: executed by ~/.bash_profile
+# .bash_prompt: executed by .bash_profile
 # Code taken from .bashrc standard Ubuntu install
 
 # set a fancy prompt (non-color, unless we know we "want" color)

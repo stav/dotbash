@@ -1,13 +1,14 @@
-# ~/.bash_functions: executed by ~/.bash_profile
+# .bash_functions: executed by .bash_profile
 # Functions allow for more complex script
 
 # Re-source bash files
 
 function sbp ()
 {
+	# seealso:: reload from bash_it
 	# TODO: check if in venv and deactivate/activate
 	deactivate
-	source ~/.bash_profile
+	source ~/.bash/.bash_profile
 }
 
 SW_HEADER_PRIVATE='';
@@ -24,6 +25,7 @@ SW_MAPPED=false;
 
 # Environment Selection
 
+# TODO: function that sets-up the virtualenv from a config
 function sw ()
 {
 	case "$1" in

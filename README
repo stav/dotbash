@@ -10,11 +10,11 @@ Bash dot files used for interactive user on Ubuntu
 
 	* Source all of these files if they exist:
 
-		** ~/.bash_path
-		** ~/.bash_prompt
-		** ~/.bash_exports
-		** ~/.bash_aliases
-		** ~/.bash_functions
-		** ~/.bash_extra
+		** ~/.bash/.bash_path
+		** ~/.bash/.bash_prompt
+		** ~/.bash/.bash_exports
+		** ~/.bash/.bash_aliases
+		** ~/.bash/.bash_functions
+		** ~/.bash_extra.bash
 
 	* Setup some history stuff and bash-completion
