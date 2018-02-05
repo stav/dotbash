@@ -3,7 +3,7 @@
 # ~/.bash_private.bash can be used for other settings you don’t want to commit
 
 # Source the bash files:
-for file in ~/.bash/.bash_{sensible,prompt,exports,aliases,functions,extra}; do
+for file in ~/.bash/.bash_{sensible,prompt,exports,aliases,functions,project,extra}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
