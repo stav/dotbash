@@ -8,8 +8,15 @@ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
 # Slack Ubuntu 16.04 : make non-OSD notifications use notify-send
 # Also in /usr/share/applications/slack.desktop
-export ELECTRON_USE_UBUNTU_NOTIFIER=1
+# export ELECTRON_USE_UBUNTU_NOTIFIER=1
 
-# Make grep patterns green which looks better than the defalt red on dark themes
-# http://unix.stackexchange.com/questions/148#answer-174
-export GREP_COLOR='1;32'
+# Bash_It overrides this so we add it to .bash_extra
+# export GREP_COLOR='1;32'
+
+# Add `~/bin` to the `$PATH` : this is double dipping from ~/.profile
+# export PATH="$HOME/bin:$PATH";
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=100000
+HISTFILESIZE=100000
+HISTIGNORE="$HISTIGNORE:h:l:ll:reset"

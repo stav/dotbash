@@ -19,7 +19,6 @@ fi
 set -o noclobber
 
 # Update window size after every command
-# update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
 # Automatically trim long paths in the prompt (requires Bash 4.x)
@@ -32,6 +31,9 @@ bind Space:magic-space
 # Turn on recursive globbing (enables ** to recurse all directories)
 shopt -s globstar 2> /dev/null
 
+# Case-insensitive globbing (used in pathname expansion)
+shopt -s nocaseglob;
+
 ## SMARTER TAB-COMPLETION (Readline bindings) ##
 
 # Perform file completion in a case insensitive fashion
@@ -42,6 +44,9 @@ bind "set completion-map-case on"
 
 # Display matches for ambiguous patterns at first tab press
 bind "set show-all-if-ambiguous on"
+
+# Immediately add a trailing slash when autocompleting symlinks to directories
+bind "set mark-symlinked-directories on"
 
 ## SANE HISTORY DEFAULTS ##
 
@@ -62,7 +67,7 @@ HISTFILESIZE=100000
 HISTCONTROL="erasedups:ignoreboth"
 
 # Don't record some commands
-export HISTIGNORE="&:[ ]*:exit:ls:ll:bg:fg:h:history:clear:reset"
+export HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history:clear"
 
 # Use standard ISO 8601 timestamp
 # %F equivalent to %Y-%m-%d
