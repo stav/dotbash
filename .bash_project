@@ -25,7 +25,7 @@ function sw ()
 			echo 'PROJECTS'
 			echo
 			for p in "${!projekts[@]}";do
-				echo "$p : ${projekts[$p]}"
+				echo " $p : ${projekts[$p]}"
 			done
 			echo
 			echo 'ENVIRONMENTS'

@@ -1,20 +1,19 @@
 README
 
-Bash dot files used for interactive user on Ubuntu
+Bash script files used for interactive user on Ubuntu
 
-.bashrc
+~/.bashrc
 
 	Just source .bash_profile
 
-.bash_profile
+~/.bash_private
 
-	* Source all of these files if they exist:
+	Private project array declaration
 
-		** ~/.bash/.bash_path
-		** ~/.bash/.bash_prompt
-		** ~/.bash/.bash_exports
-		** ~/.bash/.bash_aliases
-		** ~/.bash/.bash_functions
-		** ~/.bash_extra.bash
+~/.bash-it.bash
 
-	* Setup some history stuff and bash-completion
+	Bash-It script used for setting prompt et.al.
+
+~/.bash/.bash_profile
+
+	* Source .bash_*
