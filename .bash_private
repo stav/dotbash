@@ -1,0 +1,9 @@
+# ~/.bash_private: executed by .bash/.bash_project
+# Rename to ~/.bash_private
+# Directories are relative to $HOME
+
+declare -A projekts
+
+#        key     venv     directory
+projekts[abc]='  py36     Work/MyProject1   '
+projekts[123]='  my-env   Work/MyProject2   '

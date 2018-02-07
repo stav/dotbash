@@ -1,48 +1,37 @@
 # .bash_project: executed by .bash_profile
 # Project context switching
 
-SW_HEADER_PRIVATE='';
-SW_HEADER_PUBLIC='
-  PUBLIC HANDLES:                 \n
-  ---------------                 \n
-  sp3 - Scrapy with Python 3      \n
-';
-SW_HEADER_ENVS='
-  ENVIRONMENTS: \n
-  ------------- \n
-';
-SW_MAPPED=false;
+# Projects are private
+[ -r ~/.bash_private ] && source ~/.bash_private
 
-# Environment Selection
-
-# TODO: function that sets-up the virtualenv from a config
 function sw ()
 {
-	case "$1" in
-		sp3)
-			workon 'scrapy-py3';
-			cd "$HOME/Work/Scrapy";
-			rm -rfv build project.egg-info *.jl
-			rm -rfv build project.egg-info *.jl *.csv
-			rmpyc
-			;;
-		help)
-			echo 'No help for the wicked.';
-			;;
-		*)
-			[ -r ~/.bash_functions_private ] && source ~/.bash_functions_private;
+	if [ ${#projekts[@]} -gt 0 ]; then # We have projects in private
+		if [ -n "$1" ]; then # We have a command argument
 
-			if [ "$SW_MAPPED" = false ]; then # Nothing in private
-				if [ -z "$1" ]; then # No arguments
-					echo
-					echo -e $SW_HEADER_PUBLIC;
-					echo -e $SW_HEADER_PRIVATE;
-					echo -e $SW_HEADER_ENVS;
-					workon;
-				else
-					echo "No mapping for $1";
-				fi
+			if [ -v projekts[$1] ]; then # We have a valid project
+				project=(${projekts[$1]})
+				venv=${project[0]}
+				vdir=${project[1]}
+				[ $venv != 0 ] && workon $venv
+				[ -n "$vdir" ] && cd "$HOME/$vdir"
+			else
+				return 1
 			fi
-			;;
-	esac
+
+		else
+			# List projects
+			echo
+			echo 'PROJECTS'
+			echo
+			for p in "${!projekts[@]}";do
+				echo "$p : ${projekts[$p]}"
+			done
+			echo
+			echo 'ENVIRONMENTS'
+			echo
+			workon
+			return 0
+		fi
+	fi
 }
