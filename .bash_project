@@ -7,12 +7,17 @@
 function sw ()
 {
 	if [ ${#projekts[@]} -gt 0 ]; then # We have projects in private
-		if [ -n "$1" ]; then # We have a command argument
+		# echo " ${#projekts[@]} projects"
 
-			if [ -v projekts[$1] ]; then # We have a valid project
+		if [ -n "$1" ]; then # We have a command argument
+			# echo " Looking @ $1: (${projekts[$1]})"
+
+			if [ -n "${projekts[$1]}" ]; then # We have a valid project
 				project=(${projekts[$1]})
 				venv=${project[0]}
 				vdir=${project[1]}
+				# echo " Working on ($venv) in ($vdir)"
+
 				[ $venv != 0 ] && workon $venv
 				[ -n "$vdir" ] && cd "$HOME/$vdir"
 			else
