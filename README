@@ -4,16 +4,16 @@ Bash script files used for interactive user on Ubuntu
 
 ~/.bashrc
 
-	Just source .bash_profile
+	Source .bash_profile
 
 ~/.bash_private
 
-	Private project array declaration
+	Private source file
 
 ~/.bash-it.bash
 
-	Bash-It script used for setting prompt et.al.
+	Bash-It script used for setting prompt et.al
 
 ~/.bash/.bash_profile
 
-	* Source .bash_*
+	Source the rest of the .bash files

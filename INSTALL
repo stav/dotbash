@@ -1,15 +1,7 @@
 INSTALL
 
-The provided `install.sh` script will create symlinks in $HOME to point to the
-dotfiles from the repo.
+$ git clone git@github.com:stav/dotfiles.git ~/.bash
 
-If any of these files exist, then a backup is made of each, which will be again
-overwritten if you run the install a second time.
+$ mv ~/.bashrc ~/.bashrc.bak
 
-Run the install::
-
-	$ git clone git@github.com:stav/dotfiles.git
-
-	$ cd dotfiles
-
-	$ ./install.sh
+$ cp ~/.bash/.bashrc ~/.bashrc

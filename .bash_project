@@ -1,8 +1,9 @@
 # .bash_project: executed by .bash_profile
-# Project context switching
+# Project context switching using Python virtual environments
 
-# Projects are private
-[ -r ~/.bash_private ] && source ~/.bash_private
+declare -A projekts
+
+[ -r ~/.bash_projects ] && source ~/.bash_projects
 
 function sw ()
 {

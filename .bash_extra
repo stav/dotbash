@@ -32,7 +32,7 @@ fi
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # Bash-it
-source ~/.bash-it.bash;
+[ -f ~/.bash-it.bash ] && source ~/.bash-it.bash
 
 # Grep color
 # # Make grep patterns a color that looks better than the default red on dark themes
