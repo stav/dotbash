@@ -4,7 +4,7 @@ Bash script files used for interactive user on Ubuntu
 
 ~/.bashrc
 
-	Source .bash_profile
+	Source ~/.bash/.bash_profile
 
 ~/.bash/.bash_profile
 
