@@ -6,14 +6,18 @@ Bash script files used for interactive user on Ubuntu
 
 	Source .bash_profile
 
-~/.bash_private
-
-	Private source file
-
-~/.bash-it.bash
-
-	Bash-It script used for setting prompt et.al
-
 ~/.bash/.bash_profile
 
 	Source the rest of the .bash files
+
+~/.bash_projects
+
+	Create this file, see ~/.bash/bash_projects
+
+~/.bash_private
+
+	Other settings you don’t want to commit
+
+~/.bash-it.bash
+
+	https://github.com/Bash-it/bash-it

@@ -7,7 +7,7 @@ declare -A projekts
 
 function sw ()
 {
-	if [ ${#projekts[@]} -gt 0 ]; then # We have projects in private
+	if [ ${#projekts[@]} -gt 0 ]; then # We have projects
 		# echo " ${#projekts[@]} projects"
 
 		if [ -n "$1" ]; then # We have a command argument
