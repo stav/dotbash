@@ -1,8 +1,12 @@
 # .bash_projects: executed by .bash/.bash_project
 # Projects for context switching using Python virtual environments
 # This file is not sourced, copy to ~/.bash_projects to add private projects
+# Python virtual environments are labeled as venv
 # Directories are relative to $HOME
 
-#        key     venv     directory
-projekts[abc]='  py36     Work/MyProject1   '
-projekts[123]='  my-env   Work/MyProject2   '
+#         key      venv     directory
+projekts['abc']='  py36     Work/MyProject1   '
+projekts['123']='  my-env   Work/MyProject2   '
+
+# Then you can switch to project environments with:
+#   $ sw abc
