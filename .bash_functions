@@ -14,8 +14,8 @@ function sbp ()
 function repeat ()
 {
 	# printf "{$1}%.0s" {1..{$2}}
-    # seq  -f "$1" -s '' $2; echo
-    yes $1 | head -$2 | paste -s -d '' -
+	# seq  -f "$1" -s '' $2; echo
+	yes $1 | head -$2 | paste -s -d '' -
 }
 
 # Git rebase head [ num-prev-commits ]
