@@ -8,4 +8,6 @@ case $- in
 esac
 
 # Just source .bash_profile which starts everything
-source ~/.bash/.bash_profile;
+if [ -f ~/.bash/.bash_profile ]; then
+	source ~/.bash/.bash_profile;
+fi
