@@ -1,4 +1,4 @@
-# .bash_aliases: executed by .bash_profile
+# aliases.bash: executed by profile.bash
 # examples taken from https://github.com/mathiasbynens/dotfiles
 
 # enable color support of ls and also add handy aliases

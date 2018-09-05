@@ -7,7 +7,7 @@ case $- in
 	  *) return;;
 esac
 
-# Just source .bash_profile which starts everything
-if [ -f ~/.bash/.bash_profile ]; then
-	source ~/.bash/.bash_profile;
+# Just source profile.bash which starts everything
+if [ -f ~/.bash/src/profile.bash ]; then
+	source ~/.bash/src/profile.bash;
 fi

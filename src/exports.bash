@@ -1,4 +1,4 @@
-# .bash_exports: executed by .bash_profile
+# exports.bash: executed by profile.bash
 
 # Virtual Environment Setup
 # http://virtualenvwrapper.readthedocs.org/en/latest/install.html#shell-startup-file
@@ -10,7 +10,7 @@ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 # Also in /usr/share/applications/slack.desktop
 # export ELECTRON_USE_UBUNTU_NOTIFIER=1
 
-# Bash_It overrides this so we add it to .bash_extra
+# Bash_It overrides this so we add it to extra.bash
 # export GREP_COLOR='1;32'
 
 # Add `~/bin` to the `$PATH` : this is double dipping from ~/.profile

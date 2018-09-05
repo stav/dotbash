@@ -1,4 +1,4 @@
-# .bash_extra: executed by .bash_profile
+# extra.bash: executed by profile.bash
 
 # Less
 # make less more friendly for non-text input files, see lesspipe(1)

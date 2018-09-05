@@ -1,4 +1,4 @@
-# .bash_project: executed by .bash_profile
+# project.bash: executed by profile.bash
 # Project context switching using Python virtual environments
 
 declare -A projekts

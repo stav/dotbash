@@ -1,4 +1,4 @@
-# .bash_functions: executed by .bash_profile
+# functions.bash: executed by profile.bash
 # Functions allow for more complex script
 
 # Re-source bash files
@@ -7,7 +7,7 @@ function sbp ()
 	# seealso:: reload from bash_it
 	# TODO: check if in venv and deactivate/activate
 	deactivate
-	source ~/.bash/.bash_profile
+	source ~/.bash/src/profile.bash
 }
 
 # Repeat a character: `repeat - 10`

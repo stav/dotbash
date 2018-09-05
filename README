@@ -4,19 +4,19 @@ Bash script files used for interactive user on Ubuntu
 
 ~/.bashrc
 
-	Source ~/.bash/.bash_profile
+	Source ~/.bash/src/profile.bash
 
-~/.bash/.bash_profile
+~/.bash/src/profile.bash
 
-	Source the rest of the .bash files
+	Source the rest of the files
 
 ~/.bash_projects
 
-	Create this file, see ~/.bash/bash_projects
+	User-defined, see ~/.bash/.bash_projects
 
 ~/.bash_private
 
-	Other settings you don’t want to commit
+	User-defined, settings you don’t want to commit
 
 ~/.bash-it.bash
 

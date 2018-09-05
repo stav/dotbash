@@ -1,4 +1,4 @@
-# .bash_sensible: executed by .bash_profile
+# sensible.bash: executed by profile.bash
 # Sensible Bash - An attempt at saner Bash defaults
 # Maintainer: mrzool <http://mrzool.cc>
 # Repository: https://github.com/mrzool/bash-sensible
