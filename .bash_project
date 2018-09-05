@@ -14,13 +14,26 @@ function sw ()
 			# echo " Looking @ $1: (${projekts[$1]})"
 
 			if [ -n "${projekts[$1]}" ]; then # We have a valid project
+				# Partition project data line
 				project=(${projekts[$1]})
-				venv=${project[0]}
-				vdir=${project[1]}
+				venv=${project[0]} # virtualenv
+				vdir=${project[1]} # working directory
 				# echo " Working on ($venv) in ($vdir)"
 
-				[ $venv != 0 ] && workon $venv
+				# Change to working directory
 				[ -n "$vdir" ] && cd "$HOME/$vdir"
+
+				# Deactivate any current environment
+				if [ -n "$VIRTUAL_ENV" ]; then # We have a venv activated
+					deactivate
+				fi
+
+				# Activate environment
+				if [ "$venv" == "-" ]; then
+					pipenv shell
+				else
+					workon $venv
+				fi
 			else
 				return 1
 			fi

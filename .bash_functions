@@ -27,11 +27,12 @@ function git_rebase_head ()
 # Git dashboard with status and stuff
 function git_dash ()
 {
-	yes '' | sed 9q;  # print blank lines
-	repeat . 100
+	# Ignore errors https://github.com/pypa/pipenv/issues/2753
+	yes '' 2>/dev/null | sed 9q  # print blank lines
+	repeat . 100 2>/dev/null  # print 100 dots as a section separator
 	gb
-	repeat . 100
+	repeat . 100 2>/dev/null  # print 100 dots as a section separator
 	gs
-	repeat . 100
+	repeat . 100 2>/dev/null  # print 100 dots as a section separator
 	gl
 }
