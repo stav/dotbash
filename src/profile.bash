@@ -1,6 +1,6 @@
 # profile.bash: executed by ~/.bashrc
 # Source the bash files that do the heavy lifting
-# ~/private.bash can be used for other settings you don’t want to commit
+# ~/.bash_private can be used for other settings you don’t want to commit
 
 # Source the bash files:
 for file in ~/.bash/src/{sensible,prompt,exports,aliases,functions,project,extra}.bash; do

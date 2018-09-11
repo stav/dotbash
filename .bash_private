@@ -1,4 +1,4 @@
 # .bash_private
 # If locaed in home directory executed by .bash/src/profile.bash
 # Private settings
-# This file is not sourced, copy to ~/.bash_private to add private settings
+# Sample file: copy to ~/.bash_private to add private settings

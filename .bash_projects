@@ -1,7 +1,7 @@
 # .bash_projects
 # If locaed in home directory executed by .bash/src/project.bash
 # Projects for context switching using Python virtual environments
-# This file is not sourced, copy to ~/.bash_projects to add secret projects
+# Sample file: copy to ~/.bash_projects to add secret projects
 # Python virtual environments are labeled as venv (dash will use pipenv)
 # Directories are relative to $HOME
 
