@@ -45,3 +45,10 @@ export GREP_COLOR='0;36'  # blue
 if [ -x "$(command -v pipenv)" ]; then
 	eval "$(pipenv --completion)"
 fi
+
+# nvm
+# https://github.com/creationix/nvm
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
