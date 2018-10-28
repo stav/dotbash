@@ -2,13 +2,14 @@
 # If locaed in home directory executed by .bash/src/project.bash
 # Projects for context switching using Python virtual environments
 # Sample file: copy to ~/.bash_projects to add secret projects
-# Python virtual environments are labeled as venv (dash will use pipenv)
-# Directories are relative to $HOME
+# venv "PIPENV" uses pipenv https://docs.pipenv.org
+# An empty venv "-" does not use a virtual Python environment
+# Directory's are relative to $HOME
 
 #         key      venv     directory
-projekts['abc']='  py36     Work/MyProject1 '
-projekts['123']='  my-env   Work/MyProject2 '
-projekts['xyz']='  -        Work/MyProject3 '
+projekts['abc']='  PIPENV   Work/MyProject1 '  # Uses pepenv virtual environment
+projekts['123']='  my-env   Work/MyProject2 '  # Uses virtual env named my-env
+projekts['xyz']='  -        Work/MyProject3 '  # Does not use a virtual env
 
 # Then you can switch to project environments with:
 #   $ sw abc

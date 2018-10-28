@@ -29,9 +29,9 @@ function sw ()
 				fi
 
 				# Activate environment
-				if [ "$venv" == "-" ]; then
+				if [ "$venv" == "PIPENV" ]; then
 					pipenv shell
-				else
+				elif [ "$venv" != "-" ]; then
 					workon $venv
 				fi
 			else
