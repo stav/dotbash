@@ -84,4 +84,4 @@ alias pf='pip freeze'
 alias pup='pip install --upgrade pip'
 
 # Network
-alias xip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias xip='dig @resolver1.opendns.com ANY myip.opendns.com +short'

@@ -11,21 +11,27 @@ function sw ()
 		# echo " ${#projekts[@]} projects"
 
 		if [ -n "$1" ]; then # We have a command argument
-			# echo " Looking @ $1: (${projekts[$1]})"
+			id="$1"
+			# echo " Looking @ $id: (${projekts[$id]}) - $HOME/.bash_project.$id"
 
-			if [ -n "${projekts[$1]}" ]; then # We have a valid project
+			if [ -n "${projekts[$id]}" ]; then # We have a valid project
 				# Partition project data line
-				project=(${projekts[$1]})
+				project=(${projekts[$id]})
 				venv=${project[0]} # virtualenv
 				vdir=${project[1]} # working directory
 				# echo " Working on ($venv) in ($vdir)"
 
-				# Change to working directory
-				[ -n "$vdir" ] && cd "$HOME/$vdir"
-
 				# Deactivate any current environment
 				if [ -n "$VIRTUAL_ENV" ]; then # We have a venv activated
 					deactivate
+				fi
+
+				# Change to working directory
+				[ -n "$vdir" ] && cd "$HOME/$vdir"
+
+				# Source project script if it exists
+				if [ -f "$HOME/.bash_project.$id" ]; then
+					source "$HOME/.bash_project.$id"
 				fi
 
 				# Activate environment
