@@ -20,3 +20,15 @@ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 HISTSIZE=100000
 HISTFILESIZE=100000
 HISTIGNORE="$HISTIGNORE:h:l:ll:reset"
+
+# Poetry Python management https://poetry.eustace.io/
+if [ -d $HOME/.poetry/bin ]; then
+	export PATH="$HOME/.poetry/bin:$PATH"
+fi
+
+# Pyenv Python version management https://github.com/pyenv/pyenv
+if [ -d $HOME/.pyenv/bin ]; then
+	export PATH="$HOME/.pyenv/bin:$PATH"
+	eval "$(pyenv init -)"
+	eval "$(pyenv virtualenv-init -)"
+fi
