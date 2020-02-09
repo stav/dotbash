@@ -41,10 +41,10 @@ fi
 # export GREP_COLOR='1;30'  # grey
 export GREP_COLOR='0;36'  # blue
 
-# https://github.com/pypa/pipenv
-if [ -x "$(command -v pipenv)" ]; then
-	eval "$(pipenv --completion)"
-fi
+# # https://github.com/pypa/pipenv
+# if [ -x "$(command -v pipenv)" ]; then
+# 	eval "$(pipenv --completion)"
+# fi
 
 # nvm
 # https://github.com/creationix/nvm
