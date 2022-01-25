@@ -35,4 +35,5 @@ function git_dash ()
 	gs
 	repeat . 100 2>/dev/null  # print 100 dots as a section separator
 	gl
+	echo
 }

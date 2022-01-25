@@ -56,3 +56,10 @@ if [ -d "$NVM_DIR" ]; then
 else
 	unset NVM_DIR
 fi
+
+# Deno
+# deno completions bash > /usr/local/etc/bash_completion.d/deno.bash
+source /usr/local/etc/bash_completion.d/deno.bash
+
+# Rust
+source "$HOME/.cargo/env"

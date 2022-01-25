@@ -1,6 +1,18 @@
 # README
 
-Bash scripts used for interactive user on Ubuntu
+Bash scripts used for interactive user
+
+## Install
+
+	$ git clone git@github.com:stav/dotbash.git ~/.bash
+
+	$ mv ~/.bashrc ~/.bashrc.bak
+
+	$ cp ~/.bash/.bashrc ~
+
+# Also copy .bash-it.bash to your home directory to use Bash-It
+
+	$ cp ~/.bash/.bash-it.bash ~
 
 ## Scripts
 
