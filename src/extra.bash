@@ -63,3 +63,6 @@ source /usr/local/etc/bash_completion.d/deno.bash
 
 # Rust
 source "$HOME/.cargo/env"
+
+# Ruby rbenv
+eval "$(rbenv init - bash)"

@@ -15,7 +15,7 @@
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=100000
 HISTFILESIZE=100000
-HISTIGNORE="$HISTIGNORE:h:l:ll:reset"
+HISTIGNORE="$HISTIGNORE:c:h:l:ll:reset"
 
 # # Poetry Python management https://poetry.eustace.io/
 # if [ -d $HOME/.poetry/bin ]; then
@@ -29,9 +29,13 @@ HISTIGNORE="$HISTIGNORE:h:l:ll:reset"
 # 	eval "$(pyenv virtualenv-init -)"
 # fi
 
-# Deno
-export DENO_INSTALL="/home/stav/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
+# # Solana
+# export PATH="$PATH:$HOME/.local/share/solana/install/active_release/bin"
 
-# Solana
-export PATH="/home/stav/.local/share/solana/install/active_release/bin:$PATH"
+# # RubyGems
+# export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+# export PATH="$PATH:$GEM_HOME/bin"
+
+# Deno
+export DENO_INSTALL="$HOME/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"

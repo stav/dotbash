@@ -38,6 +38,7 @@ alias dt="cd ~/Desktop"
 alias wo="cd ~/Work"
 
 # Common
+alias c="clear"
 alias h="history"
 
 # Tree
