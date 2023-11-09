@@ -39,3 +39,10 @@ HISTIGNORE="$HISTIGNORE:c:h:l:ll:reset"
 # Deno
 export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/home/stav/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+
+# Flutter
+export CHROME_EXECUTABLE=/var/lib/snapd/snap/bin/chromium
