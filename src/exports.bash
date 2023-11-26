@@ -46,3 +46,16 @@ export PATH="$PNPM_HOME:$PATH"
 
 # Flutter
 export CHROME_EXECUTABLE=/var/lib/snapd/snap/bin/chromium
+# Gradle
+export JAVA_HOME=/home/stav/Applications/android-studio/jbr
+
+# Perl
+PATH="/home/stav/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/stav/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/stav/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/stav/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/stav/perl5"; export PERL_MM_OPT;
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
