@@ -34,13 +34,6 @@ fi
 # Bash-it
 [ -f ~/.bash-it.bash ] && source ~/.bash-it.bash
 
-# Grep color
-# # Make grep patterns a color that looks better than the default red on dark themes
-# # http://unix.stackexchange.com/questions/148#answer-174
-# export GREP_COLOR='1;32'  # green
-# export GREP_COLOR='1;30'  # grey
-export GREP_COLOR='0;36'  # blue
-
 # https://github.com/pypa/pipenv
 if [ -x "$(command -v pipenv)" ]; then
 	eval "$(pipenv --completion)"
