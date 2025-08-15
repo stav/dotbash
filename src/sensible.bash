@@ -1,4 +1,3 @@
-# sensible.bash: executed by profile.bash
 # Sensible Bash - An attempt at saner Bash defaults
 # Maintainer: mrzool <http://mrzool.cc>
 # Repository: https://github.com/mrzool/bash-sensible
@@ -7,9 +6,9 @@
 # Unique Bash version check
 if ((BASH_VERSINFO[0] < 4))
 then
-	echo "sensible.bash: Looks like you're running an older version of Bash."
-	echo "sensible.bash: You need at least bash-4.0 or some options will not work correctly."
-	echo "sensible.bash: Keep your software up-to-date!"
+  echo "sensible.bash: Looks like you're running an older version of Bash."
+  echo "sensible.bash: You need at least bash-4.0 or some options will not work correctly."
+  echo "sensible.bash: Keep your software up-to-date!"
 fi
 
 ## GENERAL OPTIONS ##
@@ -30,9 +29,6 @@ bind Space:magic-space
 
 # Turn on recursive globbing (enables ** to recurse all directories)
 shopt -s globstar 2> /dev/null
-
-# Case-insensitive globbing (used in pathname expansion)
-shopt -s nocaseglob;
 
 ## SMARTER TAB-COMPLETION (Readline bindings) ##
 
@@ -104,3 +100,4 @@ shopt -s cdable_vars
 # export projects="$HOME/projects"
 # export documents="$HOME/Documents"
 # export dropbox="$HOME/Dropbox"
+

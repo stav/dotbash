@@ -35,7 +35,8 @@ alias .....="cd ../../../.."
 alias dm="cd ~/Documents"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias wo="cd ~/Work"
+alias wo="cd ~/Work && ll"
+cl() { cd "$1" && ll; }
 
 # Common
 alias c="clear"
@@ -74,7 +75,7 @@ alias gs='git status '
 alias gt='git mergetool '
 alias gq=git_dash  # see functions
 
-# Enable aliases to be sudo’ed
+# Enable aliases to be sudo'ed
 alias sudo='sudo '
 
 # Get week number

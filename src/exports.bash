@@ -16,33 +16,51 @@ HISTIGNORE="$HISTIGNORE:c:h:l:ll:reset"
 GREP_COLOR='1;32'  # green
 export GREP_COLORS="ms=${GREP_COLOR}:mc=${GREP_COLOR}:ln=33"
 
+# Helper to add directories to PATH only if not already present
+add_to_path_if_missing() {
+  for dir in "$@"; do
+    case ":$PATH:" in
+      *":$dir:"*) ;;
+      *) PATH="$dir:$PATH" ;;
+    esac
+  done
+  export PATH
+}
+
 # Deno
 export DENO_INSTALL="$HOME/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
+add_to_path_if_missing "$DENO_INSTALL/bin"
 
 # Flutter
 export CHROME_EXECUTABLE=/var/lib/snapd/snap/bin/chromium
+
 # Gradle
 export JAVA_HOME="$HOME/Applications/android-studio/jbr"
 
 # Perl
-PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
+add_to_path_if_missing "$HOME/perl5/bin"
 
 # Bun
 export BUN_INSTALL="$HOME/.bun"
-export PATH=$BUN_INSTALL/bin:$PATH
+add_to_path_if_missing "$BUN_INSTALL/bin"
 
 # Fly
 export FLYCTL_INSTALL="$HOME/.fly"
-export PATH="$FLYCTL_INSTALL/bin:$PATH"
+add_to_path_if_missing "$FLYCTL_INSTALL/bin"
 
 # Pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
+add_to_path_if_missing "$PNPM_HOME"
+
+# Go
+export GOPATH="$HOME/go"
+add_to_path_if_missing "$GOPATH/bin"
+
+# Vapi
+export VAPI_INSTALL="$HOME/.vapi"
+export MANPATH=""$HOME/.vapi"/share/man:$MANPATH"
+add_to_path_if_missing "$VAPI_INSTALL/bin"
