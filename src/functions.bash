@@ -37,3 +37,23 @@ function git_dash ()
 	gl
 	echo
 }
+
+# Print a full-width purple banner with centered white text
+function print_sw_banner ()
+{
+	local text="$1"
+	local cols
+	cols=${COLUMNS:-$(tput cols 2>/dev/null || echo 80)}
+	local purple_bg='\033[48;5;57m\033[38;5;231m'
+	local reset='\033[0m'
+
+	# Top bar
+	printf "%b%*s%b\n" "$purple_bg" "$cols" "" "$reset"
+	# Centered text line
+	local pad
+	pad=$(( (cols - ${#text}) / 2 ))
+	(( pad < 0 )) && pad=0
+	printf "%b%*s%s%*s%b\n" "$purple_bg" "$pad" "" "$text" "$pad" "" "$reset"
+	# Bottom bar and spacing
+	printf "%b%*s%b\n" "$purple_bg" "$cols" "" "$reset"
+}
