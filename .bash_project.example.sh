@@ -1,6 +1,7 @@
 # .bash_project.example.sh
 # If located in home directory this script will be executed by src/project.bash
 # to switch to a new project context with custom setup commands.
+# Copy this file to your home directory if you want to use it
 
 echo "Switching to example project (home directory)"
 

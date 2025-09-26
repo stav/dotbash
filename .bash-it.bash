@@ -2,7 +2,7 @@
 # .bash-it.bash
 # Bash-it settings
 # If located in home directory executed by .bash/src/extra.bash
-# cp ~/.bash/.bash-it.bash ~
+# Copy this file to your home directory if you want to use it
 
 # Path to the bash it configuration
 export BASH_IT="$HOME/.bash_it"
