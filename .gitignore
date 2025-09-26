@@ -1,0 +1,6 @@
+# Ignore all files in projects folder except .enc files
+projects/*
+!projects/*.enc
+
+# Ignore encryption passphrase
+.encrypt_passphrase

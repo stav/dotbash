@@ -61,7 +61,7 @@ function sw() {
     
 Switch to a new project context with custom setup commands.
 
-Sources .bash_project.<project_id>.sh from current dir or $HOME.
+Sources .bash_project.<project_id>.sh from current dir, $HOME, or projects/ folder.
 
 Arguments:
   project_id    Name/ID of the project to switch to
@@ -75,13 +75,15 @@ Examples:
   sw --help     Show this help message
 "
 
+
     # Helper to print available tokens
     local _sw_print_tokens
     _sw_print_tokens() {
         declare -A token_to_path=()
         local tokens=()
         shopt -s nullglob
-        for f in "./.bash_project."*.sh "$HOME/.bash_project."*.sh; do
+        # Check for regular project files
+        for f in "./.bash_project."*.sh "$HOME/.bash_project."*.sh "$HOME/.bash/projects/.bash_project."*.sh; do
             [[ -f "$f" ]] || continue
             local base
             base="$(basename "$f")"
@@ -103,6 +105,7 @@ Examples:
                 tokens+=("$t")
             fi
         done
+        
         shopt -u nullglob
         if [[ ${#tokens[@]} -eq 0 ]]; then
             echo "  (none found)"
@@ -131,14 +134,17 @@ Examples:
     local token="$1"
     local script_local="./.bash_project.$token.sh"
     local script_home="$HOME/.bash_project.$token.sh"
+    local script_projects="$HOME/.bash/projects/.bash_project.$token.sh"
     local target_script=""
 
     if [[ -f "$script_local" ]]; then
         target_script="$script_local"
     elif [[ -f "$script_home" ]]; then
         target_script="$script_home"
+    elif [[ -f "$script_projects" ]]; then
+        target_script="$script_projects"
     else
-        echo "Error: script not found: .bash_project.$token.sh (searched ./ and $HOME)"
+        echo "Error: script not found: .bash_project.$token.sh (searched ./ and $HOME and projects/)"
         return 1
     fi
 
@@ -157,7 +163,8 @@ _sw_scripts_completion() {
     # Collect tokens from ./ and $HOME, preferring local duplicates implicitly
     local tokens=()
     shopt -s nullglob
-    for f in "./.bash_project."*.sh "$HOME/.bash_project."*.sh; do
+    # Regular project files
+    for f in "./.bash_project."*.sh "$HOME/.bash_project."*.sh "$HOME/.bash/projects/.bash_project."*.sh; do
         [[ -f "$f" ]] || continue
         local base t
         base="$(basename "$f")"
@@ -165,6 +172,7 @@ _sw_scripts_completion() {
         t="${t%.sh}"
         tokens+=("$t")
     done
+    
     shopt -u nullglob
 
     # Deduplicate and complete
