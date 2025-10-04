@@ -1,6 +1,5 @@
 # prompt.bash: executed by profile.bash
 # Code taken from .bashrc standard Ubuntu install
-# Custom prompt declared with Bash-it in extra.bash
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in

@@ -31,9 +31,6 @@ fi
 # https://github.com/junegunn/fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-# Bash-it
-[ -f ~/.bash-it.bash ] && source ~/.bash-it.bash
-
 # https://github.com/pypa/pipenv
 if [ -x "$(command -v pipenv)" ]; then
 	eval "$(pipenv --completion)"

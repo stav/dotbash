@@ -4,7 +4,6 @@
 # Re-source bash files
 function sbp ()
 {
-	# seealso:: reload from bash_it
 	# TODO: check if in venv and deactivate/activate
 	deactivate
 	source ~/.bash/src/profile.bash
