@@ -26,7 +26,6 @@
 # ---------------------
 # Create `.bash_project.<project_id>.sh` files with your project setup:
 #
-#   #!/bin/bash
 #   # Example: .bash_project.myapp.sh
 #   export PROJECT_ID=MyApp
 #   print_sw_banner "$PROJECT_ID"
