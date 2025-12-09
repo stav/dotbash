@@ -15,9 +15,9 @@ function git_dash ()
 	# Ignore errors https://github.com/pypa/pipenv/issues/2753
 	yes '' 2>/dev/null | sed 9q  # print blank lines
 	repeat . 100 2>/dev/null  # print 100 dots as a section separator
-	gb
+	git branch
 	repeat . 100 2>/dev/null  # print 100 dots as a section separator
-	gs
+	git status
 	repeat . 100 2>/dev/null  # print 100 dots as a section separator
 	gl
 	echo

@@ -17,6 +17,8 @@ alias t3="tree -L 3 -lpguh"
 alias t4="tree -L 4 -lpguh"
 
 # Git
+alias gl='git log --graph -n 10 --pretty=format:"%C(white)%h%Creset - %C(magenta)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative '
+alias gld='git log --graph -n 20 --pretty=format:"%C(white)%h%Creset - %C(magenta)%d%Creset %s %Cgreen(%ad)" --date=short '
 alias gq=git_dash  # see functions
 
 # Enable aliases to be sudo'ed
